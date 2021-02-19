@@ -22,7 +22,7 @@ def store_xml(file, payload):
 
 def load_yaml(file):
     with open(file) as f:
-        return yaml.load(f.read(), Loader=yaml.FullLoader)
+        return yaml.load(f.read(), Loader=yaml.SafeLoader)
 
 def store_yaml(file, payload):
     with open (file, 'w') as f:
